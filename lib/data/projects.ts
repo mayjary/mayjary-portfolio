@@ -1,0 +1,119 @@
+export interface Project {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  features: string[];
+  tags: string[];
+  accent: string;
+  gradient: string;
+  flagship?: boolean;
+}
+
+export const PROJECTS: Project[] = [
+  {
+    id: "finora",
+    title: "FINORA",
+    subtitle: "AI-Powered Personal Finance Platform",
+    description:
+      "Flagship FinTech product combining conversational AI, transaction intelligence, and predictive financial analytics into a unified decision engine.",
+    features: [
+      "AI chatbot for financial guidance",
+      "Transaction tracking & categorization",
+      "Budgeting & savings goals",
+      "Financial analytics dashboard",
+      "Personalized AI insights",
+      "Market sentiment integration",
+    ],
+    tags: ["FinTech", "AI", "Python", "React", "NLP"],
+    accent: "#3b82f6",
+    gradient: "from-blue-500/20 via-blue-900/10 to-transparent",
+    flagship: true,
+  },
+  {
+    id: "aura",
+    title: "AURA",
+    subtitle: "AI Manufacturing Management System",
+    description:
+      "Industrial intelligence platform for workflow tracking, production monitoring, and AI-powered operational insights across manufacturing floors.",
+    features: [
+      "Workflow tracking",
+      "Production monitoring",
+      "Inventory management",
+      "Analytics dashboard",
+      "AI-powered insights",
+    ],
+    tags: ["Manufacturing", "AI", "Dashboard", "Analytics"],
+    accent: "#10b981",
+    gradient: "from-emerald-500/20 via-emerald-900/10 to-transparent",
+  },
+  {
+    id: "outfit",
+    title: "AI Outfit Try-On",
+    subtitle: "Generative Fashion Intelligence",
+    description:
+      "Virtual try-on system using Google AI APIs to visualize outfit combinations on models before purchase — reducing uncertainty in online fashion.",
+    features: [
+      "Google AI image generation",
+      "Virtual try-on experience",
+      "Supabase cloud storage",
+      "Wardrobe management",
+      "Outfit combination engine",
+    ],
+    tags: ["Generative AI", "Supabase", "Next.js", "Vision"],
+    accent: "#ec4899",
+    gradient: "from-pink-500/20 via-pink-900/10 to-transparent",
+  },
+  {
+    id: "sentiment",
+    title: "Stock Market Sentiment",
+    subtitle: "Predictive Market Intelligence",
+    description:
+      "NLP pipeline that processes financial news at scale, classifying sentiment to surface market signals before they become obvious.",
+    features: [
+      "Financial news processing",
+      "Sentiment classification",
+      "NLP pipeline",
+      "Market trend visualization",
+      "Predictive intelligence",
+    ],
+    tags: ["NLP", "Python", "ML", "FinTech"],
+    accent: "#f59e0b",
+    gradient: "from-amber-500/20 via-amber-900/10 to-transparent",
+  },
+  {
+    id: "manufacturehub",
+    title: "ManufactureHub",
+    subtitle: "Multi-Portal Workflow Platform",
+    description:
+      "Centralized manufacturing platform connecting clients, workers, and admins through role-based portals with real-time production tracking.",
+    features: [
+      "Client portal",
+      "Worker portal",
+      "Admin dashboard",
+      "Project tracking",
+      "Production analytics",
+      "Role-based access control",
+    ],
+    tags: ["Full Stack", "RBAC", "Manufacturing", "Real-time"],
+    accent: "#6366f1",
+    gradient: "from-indigo-500/20 via-indigo-900/10 to-transparent",
+  },
+  {
+    id: "hotel",
+    title: "Hotel Booking Platform",
+    subtitle: "Hospitality Experience System",
+    description:
+      "End-to-end booking platform with automated email workflows, reservation management, and elegant customer-facing hospitality UX.",
+    features: [
+      "Booking system",
+      "Email automation",
+      "Customer management",
+      "Reservation tracking",
+      "Admin dashboard",
+    ],
+    tags: ["Next.js", "Email", "Booking", "Full Stack"],
+    accent: "#14b8a6",
+    gradient: "from-teal-500/20 via-teal-900/10 to-transparent",
+  },
+];
