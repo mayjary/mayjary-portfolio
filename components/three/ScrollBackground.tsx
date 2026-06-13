@@ -54,11 +54,11 @@ export function ScrollBackground() {
       const p = progress;
       const mode = p < 0.2 ? 0 : p < 0.4 ? 1 : p < 0.6 ? 2 : p < 0.8 ? 3 : 4;
       const colors = [
-        "59, 130, 246",
-        "16, 185, 129",
-        "139, 92, 246",
-        "245, 158, 11",
-        "59, 130, 246",
+        "91, 156, 246",
+        "52, 211, 153",
+        "124, 109, 240",
+        "251, 191, 36",
+        "91, 156, 246",
       ];
       const color = colors[mode];
 
@@ -112,7 +112,7 @@ export function ScrollBackground() {
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = `rgba(${color}, ${0.06 * (1 - dist / maxDist)})`;
+            ctx.strokeStyle = `rgba(${color}, ${0.1 * (1 - dist / maxDist)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

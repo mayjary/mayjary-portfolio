@@ -19,7 +19,7 @@ export function Navigation() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border"
+          ? "bg-background/85 backdrop-blur-xl border-b border-border shadow-sm shadow-accent/5"
           : "bg-transparent"
       }`}
     >
@@ -97,7 +97,8 @@ export function Navigation() {
 
 export function Footer() {
   return (
-    <footer className="section-padding py-12 border-t border-border">
+    <footer className="section-padding py-10 md:py-12 border-t border-border relative">
+      <div className="glow-line w-full absolute top-0 left-0 opacity-40" />
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
           <p className="font-mono text-sm text-muted">

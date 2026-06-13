@@ -59,7 +59,7 @@ function NeuralNodes({
   return (
     <instancedMesh ref={meshRef} args={[undefined, undefined, nodes.length]}>
       <sphereGeometry args={[1, 8, 8]} />
-      <meshBasicMaterial color="#60a5fa" transparent opacity={0.9} />
+      <meshBasicMaterial color="#7cb4ff" transparent opacity={0.95} />
     </instancedMesh>
   );
 }
@@ -127,7 +127,7 @@ function NeuralConnections({
 
   return (
     <lineSegments ref={lineRef} geometry={geometry}>
-      <lineBasicMaterial color="#3b82f6" transparent opacity={0.25} />
+      <lineBasicMaterial color="#5b9cf6" transparent opacity={0.35} />
     </lineSegments>
   );
 }

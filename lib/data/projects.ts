@@ -8,6 +8,10 @@ export interface Project {
   accent: string;
   gradient: string;
   flagship?: boolean;
+  media?: {
+    type: "video" | "visual";
+    src?: string;
+  };
 }
 
 export const PROJECTS: Project[] = [
@@ -23,29 +27,12 @@ export const PROJECTS: Project[] = [
       "Budgeting & savings goals",
       "Financial analytics dashboard",
       "Personalized AI insights",
-      "Market sentiment integration",
     ],
     tags: ["FinTech", "AI", "Python", "React", "NLP"],
-    accent: "#3b82f6",
+    accent: "#5b9cf6",
     gradient: "from-blue-500/20 via-blue-900/10 to-transparent",
     flagship: true,
-  },
-  {
-    id: "aura",
-    title: "AURA",
-    subtitle: "AI Manufacturing Management System",
-    description:
-      "Industrial intelligence platform for workflow tracking, production monitoring, and AI-powered operational insights across manufacturing floors.",
-    features: [
-      "Workflow tracking",
-      "Production monitoring",
-      "Inventory management",
-      "Analytics dashboard",
-      "AI-powered insights",
-    ],
-    tags: ["Manufacturing", "AI", "Dashboard", "Analytics"],
-    accent: "#10b981",
-    gradient: "from-emerald-500/20 via-emerald-900/10 to-transparent",
+    media: { type: "video", src: "/Finora.mp4" },
   },
   {
     id: "outfit",
@@ -58,11 +45,11 @@ export const PROJECTS: Project[] = [
       "Virtual try-on experience",
       "Supabase cloud storage",
       "Wardrobe management",
-      "Outfit combination engine",
     ],
     tags: ["Generative AI", "Supabase", "Next.js", "Vision"],
     accent: "#ec4899",
     gradient: "from-pink-500/20 via-pink-900/10 to-transparent",
+    media: { type: "visual" },
   },
   {
     id: "sentiment",
@@ -75,11 +62,11 @@ export const PROJECTS: Project[] = [
       "Sentiment classification",
       "NLP pipeline",
       "Market trend visualization",
-      "Predictive intelligence",
     ],
     tags: ["NLP", "Python", "ML", "FinTech"],
-    accent: "#f59e0b",
+    accent: "#fbbf24",
     gradient: "from-amber-500/20 via-amber-900/10 to-transparent",
+    media: { type: "video", src: "/stock_predictor.mov" },
   },
   {
     id: "manufacturehub",
@@ -88,32 +75,31 @@ export const PROJECTS: Project[] = [
     description:
       "Centralized manufacturing platform connecting clients, workers, and admins through role-based portals with real-time production tracking.",
     features: [
-      "Client portal",
-      "Worker portal",
-      "Admin dashboard",
+      "Client, worker & admin portals",
       "Project tracking",
       "Production analytics",
       "Role-based access control",
     ],
     tags: ["Full Stack", "RBAC", "Manufacturing", "Real-time"],
-    accent: "#6366f1",
+    accent: "#7c6df0",
     gradient: "from-indigo-500/20 via-indigo-900/10 to-transparent",
+    media: { type: "video", src: "/ManuHub_video.mp4" },
   },
   {
     id: "hotel",
-    title: "Hotel Booking Platform",
-    subtitle: "Hospitality Experience System",
+    title: "Luxury Restaurant Website",
+    subtitle: "Hospitality & Food Service Digital Experiences",
     description:
-      "End-to-end booking platform with automated email workflows, reservation management, and elegant customer-facing hospitality UX.",
+      "Premium websites for Hotel The Greetings, SIAMO Bistro, and PICO Café — modern branding, responsive design, and customer engagement.",
     features: [
       "Booking system",
       "Email automation",
       "Customer management",
       "Reservation tracking",
-      "Admin dashboard",
     ],
     tags: ["Next.js", "Email", "Booking", "Full Stack"],
-    accent: "#14b8a6",
+    accent: "#34d399",
     gradient: "from-teal-500/20 via-teal-900/10 to-transparent",
+    media: { type: "video", src: "/hotel.mp4" },
   },
 ];

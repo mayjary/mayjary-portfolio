@@ -2,6 +2,7 @@
 
 import { useLenis } from "@/lib/hooks/useLenis";
 import { useMousePosition } from "@/lib/hooks/useMousePosition";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
 
 export function ClientProviders({ children }: { children: React.ReactNode }) {
   useLenis();
@@ -9,6 +10,7 @@ export function ClientProviders({ children }: { children: React.ReactNode }) {
 
   return (
     <>
+      <AmbientBackground />
       <div
         className="cursor-glow hidden md:block"
         style={{ left: x, top: y }}
