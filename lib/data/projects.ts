@@ -8,6 +8,8 @@ export interface Project {
   accent: string;
   gradient: string;
   flagship?: boolean;
+  liveUrl?: string;
+  githubUrl?: string;
   media?: {
     type: "video" | "visual";
     src?: string;
@@ -32,6 +34,8 @@ export const PROJECTS: Project[] = [
     accent: "#5b9cf6",
     gradient: "from-blue-500/20 via-blue-900/10 to-transparent",
     flagship: true,
+    liveUrl: "https://github.com/mayjary/finora",
+    githubUrl: "https://github.com/mayjary/finora",
     media: { type: "video", src: "/Finora.mp4" },
   },
   {
@@ -49,6 +53,8 @@ export const PROJECTS: Project[] = [
     tags: ["Generative AI", "Supabase", "Next.js", "Vision"],
     accent: "#ec4899",
     gradient: "from-pink-500/20 via-pink-900/10 to-transparent",
+    liveUrl: "https://github.com/mayjary/outfit-app",
+    githubUrl: "https://github.com/mayjary/outfit-app",
     media: { type: "visual" },
   },
   {
@@ -66,6 +72,8 @@ export const PROJECTS: Project[] = [
     tags: ["NLP", "Python", "ML", "FinTech"],
     accent: "#fbbf24",
     gradient: "from-amber-500/20 via-amber-900/10 to-transparent",
+    liveUrl: "https://github.com/mayjary/marketmood-nlp",
+    githubUrl: "https://github.com/mayjary/marketmood-nlp",
     media: { type: "video", src: "/stock_predictor.mov" },
   },
   {
@@ -83,6 +91,8 @@ export const PROJECTS: Project[] = [
     tags: ["Full Stack", "RBAC", "Manufacturing", "Real-time"],
     accent: "#7c6df0",
     gradient: "from-indigo-500/20 via-indigo-900/10 to-transparent",
+    liveUrl: "https://github.com/mayjary/INNOVATORS-UNITED-PS02-",
+    githubUrl: "https://github.com/mayjary/INNOVATORS-UNITED-PS02-",
     media: { type: "video", src: "/ManuHub_video.mp4" },
   },
   {
@@ -100,6 +110,8 @@ export const PROJECTS: Project[] = [
     tags: ["Next.js", "Email", "Booking", "Full Stack"],
     accent: "#34d399",
     gradient: "from-teal-500/20 via-teal-900/10 to-transparent",
+    liveUrl: "https://thegreetings.vercel.app",
+    githubUrl: "https://github.com/mayjary/thegreetings",
     media: { type: "video", src: "/hotel.mp4" },
   },
 ];

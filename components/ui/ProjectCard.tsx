@@ -56,34 +56,63 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               {project.subtitle}
             </p>
           </div>
-          <div
-            className="hidden sm:flex w-10 h-10 rounded-full items-center justify-center shrink-0 opacity-60 group-hover:opacity-100 transition-opacity"
-            style={{
-              background: `${project.accent}10`,
-              border: `1px solid ${project.accent}25`,
-            }}
-          >
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 14 14"
-              fill="none"
-              aria-hidden
-            >
-              <path
-                d="M1 7h12M7 1l6 6-6 6"
-                stroke={project.accent}
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+
+          {/* Arrow icon — links to liveUrl if available, otherwise githubUrl */}
+          <div className="hidden sm:flex items-center gap-2 shrink-0">
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-10 h-10 rounded-full items-center justify-center opacity-50 group-hover:opacity-80 transition-opacity"
+                style={{
+                  background: `${project.accent}10`,
+                  border: `1px solid ${project.accent}25`,
+                }}
+                aria-label={`${project.title} GitHub`}
+              >
+                {/* GitHub icon */}
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    stroke={project.accent}
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            )}
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-10 h-10 rounded-full items-center justify-center opacity-60 group-hover:opacity-100 transition-opacity"
+                style={{
+                  background: `${project.accent}10`,
+                  border: `1px solid ${project.accent}25`,
+                }}
+                aria-label={`${project.title} live demo`}
+              >
+                {/* Arrow icon */}
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+                  <path
+                    d="M1 7h12M7 1l6 6-6 6"
+                    stroke={project.accent}
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            )}
           </div>
         </div>
       </div>
 
-      {/* Media */}
-      <div className="relative mx-3 md:mx-5 rounded-2xl overflow-hidden border border-white/[0.06] shadow-2xl shadow-black/40">
+      {/* Media — full bleed, no side margins */}
+      <div className="relative w-full overflow-hidden border-y border-white/[0.06] shadow-2xl shadow-black/40">
         {project.media?.type === "video" && project.media.src ? (
           <ProjectVideo
             src={project.media.src}
